@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.top {
+}
+
+.about {
+  width: 200px;
+}
+
+ol {
+  font-size: 20pt;
+}
