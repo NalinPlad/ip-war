@@ -14,19 +14,15 @@
       <p><b>How -</b> Enter a nickname and click Continue</p> 
       <p>Click the button to get your position (warning; will show your public IP on screen)</p>
       
-      <input type="text" maxLength="10" placeholder="Leaderboard Name"></input>
-      <button onClick="alert(1)">Continue</button>
+      <input id="name" type="text" maxLength="10" placeholder="Leaderboard Name"></input>
+      <button onClick="register()">Continue</button>
     </section>
 
       <section class="top">
         <h1>Top IPs (round #?)</h1>
         <p>Round #? starting in 14:32</p>
-        <ol type="1">
-          <li>234.234.46.3</li>
-          <li>225.235.44.53</li>
-          <li>223.237.24.31</li>
-          <li>219.222.42.123</li>
-          <li>205.234.34.23</li>
+        <ol id="leaders" type="1">
+          <p id="loading">Loading...</p>
         </ol>
       </section>
 	  <script src="index.js"></script>
