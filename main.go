@@ -46,6 +46,7 @@ func Handle(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 	
+	io.WriteString(w, fmt.Sprintf("Registered %s for %s!", ip, lbname));
 	log.Println(fmt.Sprintf("registered %s for %s", ip, lbname))
 }
 
@@ -83,8 +84,6 @@ func GetData (w http.ResponseWriter, r *http.Request) {
 		
 		IP_Array[i] = [2]string{IP, lbname}
 		i++
-
-		fmt.Println(fmt.Sprintf("%s owns %s", lbname, IP))
 	}
 
 	// Convert Arr to JSON
