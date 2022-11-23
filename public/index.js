@@ -25,9 +25,12 @@ getJSON("data", (s, data) => {
     console.log(`Error: ${s}`)
   } else {
     console.log(data)
-    data.forEach(address => {
+    data.forEach(address,ind => {
       const listItem = document.createElement('li');
       listItem.appendChild(document.createTextNode(`${address[1]} - ${address[0]}`));
+
+      listItem.style.opacity = 1 - (00.1*ind);
+
       leaderBoard.appendChild(listItem);
     })
     
