@@ -24,12 +24,14 @@ getJSON("data", (s, data) => {
   if(s !== null){
     console.log(`Error: ${s}`)
   } else {
-    console.log(data)
-    data.forEach(address,ind => {
+    data.forEach((address,ind) => {
       const listItem = document.createElement('li');
       listItem.appendChild(document.createTextNode(`${address[1]} - ${address[0]}`));
 
-      listItem.style.opacity = 1 - (00.1*ind);
+      if(ind >= 10){
+        listItem.style.opacity = 0.5;
+        listItem.hidden = true;
+      }
 
       leaderBoard.appendChild(listItem);
     })
@@ -42,4 +44,12 @@ const registerName = document.getElementById("name");
 
 function register() {
   window.location.assign("play?name="+registerName.value)
+}
+
+function unhide() {
+  document.querySelectorAll("li").forEach(item => {
+    item.hidden = false;
+  });
+
+  document.getElementById("unhide").remove();
 }

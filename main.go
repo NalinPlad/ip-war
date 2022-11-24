@@ -86,9 +86,6 @@ func GetData (w http.ResponseWriter, r *http.Request) {
 		i++
 	}
 
-	// Convert Arr to JSON
-	fmt.Println(IP_Array)
-
 	var IP_JSON, _ = json.Marshal(IP_Array)
 	
 	if err != nil {

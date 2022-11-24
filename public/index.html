@@ -10,7 +10,7 @@
   <body>
     <section class="about">
       <h1>IPv4 Leaderboard</h1>
-      <p><b>What is This -</b> I have a database that will store every IP address that requests this page. IPs are ranked according to numerical value, and displays them on a leaderboard. The leaderboard resets every 30 minutes</p>
+      <p><b>What is This -</b> I have a database that will store every IP address that requests this page. IPs are ranked according to numerical value, and the top 100 are displayed on a leaderboard. The leaderboard resets every 30 minutes</p>
       <p><b>How -</b> Enter a nickname and click Continue</p> 
       <p>Click the button to get your position (warning; will show your public IP on screen)</p>
       
@@ -18,13 +18,14 @@
       <button onClick="register()">Continue</button>
     </section>
 
-      <section class="top">
-        <h1>Top IPs (round #?)</h1>
-        <p>Round #? starting in 14:32</p>
-        <ol id="leaders" type="1">
-          <p id="loading">Loading...</p>
-        </ol>
-      </section>
+    <section class="top">
+      <h1>Top IPs (round #?)</h1>
+      <p>Round #? starting in 14:32</p>
+      <ol id="leaders" type="1">
+        <p id="loading">Loading...</p>
+      </ol>
+      <button id="unhide" onClick="unhide()">Show All (100)</button>
+    </section>
 	  <script src="index.js"></script>
   </body>
 </html>
